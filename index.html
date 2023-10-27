@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-validation-local-storage</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* align-content: center; */
+        width: 100vw;
+        min-height: 100vh;
+     
+    }
+    form{
+        margin-block: 20px;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        /* max-width: 80%; */
+        width:60vw ;
+        /* height: 80vh; */
+    
+        padding: 40px 80px;
+        /* border: 1px solid red; */
+        height: 100%;
+        border-radius: 20px;
+    }
+    .mb-3   {
+       
+    }
+    .row   {
+     
+    }
+    .col-md-6   {
+    
+    }
+    h1{
+        text-align: center;
+        padding-bottom: 10px;
+        color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+
+    }
+</style>
+</head>  
+<body>
+     <!-- // function ka name submit rakhna sa bhnad araha -->
+    <form  onsubmit="submitValue()">
+        <!-- or -->
+        <!-- <form onsubmit="return validateForm();"> -->
+        <div class="mb-3">
+<h1>Registration form</h1>
+          <label for="exampleInputEmail1" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+          
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email-Address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Phone Number</label>
+            <input type="number" class="form-control" id="number" aria-describedby="emailHelp">
+            
+          </div>
+            
+          <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password">
+                  </div>
+                </div>
+                  <div class="col-md-6">
+                                    <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="c-password">
+                     </div>
+                  </div>
+            </div>
+        
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
