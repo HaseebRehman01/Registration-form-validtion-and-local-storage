@@ -7,6 +7,8 @@ var email = document.getElementById("email")
 var number = document.getElementById("number")
 var password = document.getElementById("password")
 var c_password = document.getElementById("c-password")
+var username = name.value
+// console.log(name)
 // form validation
 if (name.value === ""){
     Swal.fire({
@@ -27,36 +29,39 @@ else if (email.value === ""){
 else if (number.value === ""){
     Swal.fire({
         icon: 'error',
-        title: 'email should not be empty',
+        title: 'number should not be empty',
         text: 'Please try again.'
     });
       
-}else if (email.value === ""){
+}else if (password.value === ""){
     Swal.fire({
         icon: 'error',
-        title: 'email should not be empty',
+        title: 'password should not be empty',
         text: 'Please try again.'
     });
-      
-}else if (email.value === ""){
-    Swal.fire({
-        icon: 'error',
-        title: 'email should not be empty',
-        text: 'Please try again.'
-    });
-      
 }
+      else if (c_password.value !== password.value){
+        Swal.fire({
+            icon: 'error',
+            title: 'Confirm password should not not ne empty and  equal to password',
+            text: 'Please try again.'
+        });
+      }
+
+else{
+    Swal.fire({
+        icon: 'success',
+        title: `${username} Your are registered`,
+        showConfirmButton: false,
+        timer: 2000
+      })
+      
 
 
 
 
 
-
-
-
-
-
-// ye esa console nahi hoga qka yeh resfresh horaha bhot tezzi sa
+// This console.log won't work as the page is refreshing too quickly.
 // console.log(name.value,email.value,number.value,password.value,c_password.value)
 
 
@@ -74,20 +79,17 @@ var gettobjValue = {
 //  used for sending data between a server and a web application, or for storing configuration data.
 localStorage.setItem("userData", JSON.stringify(gettobjValue));
 // Later, when you need to use the data again, you can use JSON.parse() to convert the JSON string 
-var getUserDataSaveInLocalStorage = JSON.parse(localStorage.getItem("userData"))
+
 // back into a JavaScript object.
-console.log(getUserDataSaveInLocalStorage)//.name,password,cPassword,etc
+// console.log(getUserDataSaveInLocalStorage)//.name,password,cPassword,etc
 
-
-
-
-
-
-
-// or
-// return false
+// dashbord work
+  // Use setTimeout to delay the redirection to the dashboard
+setTimeout(function() {
+    window.location.href = "./dashboard.html";
+  }, 2000);
 }
-
-
+}
+// go to  dahboard html and js
 
 
