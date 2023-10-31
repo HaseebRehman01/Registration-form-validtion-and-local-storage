@@ -1,0 +1,13 @@
+.btn-link{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+    /* background-color: red; */
+
+align-items: center;
+}
+.btn{
+    width: 150px;
+ margin-bottom: 5px;
+}
